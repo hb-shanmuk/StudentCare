@@ -1,4 +1,4 @@
-StudentCare Application With TDD Approach
+StudentCare With TDD Approach
 ====
 
 StudentCare is an sample student schedule management platform built by following the TDD approach.
@@ -49,4 +49,4 @@ please check the [RVM integration page](https://rvm.io/integration) for steps ne
 	
 	rails s
 
-### You should now be able to connect to rails on [http://localhost:3000](http://localhost:3000) - try it out!
+#### You should now be able to connect to rails on [http://localhost:3000](http://localhost:3000) - try it out!
