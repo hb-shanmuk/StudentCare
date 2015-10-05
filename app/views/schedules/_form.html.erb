@@ -1,0 +1,81 @@
+<%= form_for(@schedule) do |f| %>
+  <% if @schedule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@schedule.errors.count, "error") %> prohibited this schedule from being saved:</h2>
+
+      <ul>
+      <% @schedule.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+  <div class="row">
+    <div class="col-md-6">
+      <div class="input-box">
+        <br>
+        <div class="custom-select-box style-1">
+          <%= f.select :student_id , Student.all.map{|student| ["#{student.username} (#{student.student_number})",student.id] }, :prompt => "Select a Student",:class => "form-control" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="input-box"> <i class="sprite icn-user"></i>
+        <%#= f.label :course %><br>
+        <%= f.text_field :course, :placeholder => "Course" %>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col-md-6">
+      <div class="input-box"> <i class="sprite icn-user"></i>
+        <%#= f.label :start_date %><br>
+        <%= f.text_field :start_date, :placeholder => "Start Date" ,class: "datepicker"%>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="input-box"> <i class="sprite icn-user"></i>
+        <%#= f.label :end_date %><br>
+        <%= f.text_field :end_date, :placeholder => "End Date" ,class: "datepicker"%><br><br>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <div class="input-box"> <i class="sprite icn-user"></i>
+        <%#= f.label :start_time %><br>
+        <%= f.text_field :start_time, :placeholder => "Start Time" %><br><br>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="input-box"> <i class="sprite icn-user"></i>
+        <%#= f.label :end_time %><br>
+        <%= f.text_field :end_time, :placeholder => "End Time" %><br><br>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="input-box"> <i class="sprite icn-user"></i>
+        <%#= f.label :location %><br>
+        <%= f.text_field :location, :placeholder => "Location" %><br><br>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="input-box"> <i class="sprite icn-user"></i>
+        <%#= f.label :faculty %><br>
+        <%= f.text_field :faculty, :placeholder => "Faculty" %><br><br>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="actions pull-right col-md-6">
+      <%= f.submit  params[:action] == "new" ? "Create" : "Update" , :class => "submit" %>
+    </div>
+  </div>
+<% end %>
+
