@@ -7,7 +7,7 @@ StudentCare is an sample student schedule management platform built by following
 ## Setup StudentCare application in local
 
 ### Double-check your RVM installation
-please check the [RVM integration page](https://rvm.io/integration) for steps needed for your terminal or environment.
+Please check the [RVM integration page](https://rvm.io/integration) for steps needed for your terminal or environment.
 
 ### Install the required ruby version using rvm
 
@@ -49,4 +49,4 @@ please check the [RVM integration page](https://rvm.io/integration) for steps ne
 	
 	rails s
 
-#### You should now be able to connect to rails on [http://localhost:3000](http://localhost:3000) - try it out!
+You should now be able to connect to rails on [http://localhost:3000](http://localhost:3000) - try it out!
